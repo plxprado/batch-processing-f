@@ -1,0 +1,46 @@
+
+<div class="container-sm p-4">
+    <div class="row">
+
+        <div class="col-6">
+           <div class="card">        
+            <div class="card-header bg-secondary text-light">
+                    Download Objects S3
+            </div>
+            
+            <div class="card-body">
+                <h5 class="card-title">Download Objects From Bucket</h5>
+                <p class="card-text">With Bucket name will be downloaded all objects inside.</p>
+            
+                 <form #forms = "ngForm" (ngSubmit)="onSubmit()" class="row g-2">
+
+                    
+                    <div class="col-auto">
+                    </div>
+                    <div class="col-auto">
+                    <label for="buecketName" class="visually-hidden">Bucket</label>
+                
+                    <input type="text" class="form-control" name="buecketName" id="buecketName" placeholder="Insert Bucket Name" [(ngModel)]="formData.buecketName">
+                    </div>
+                    <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Download Bucket</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            
+        </div>
+    </div>
+
+    <ng-container *ngIf="showProgress">
+        <div class="container-sm p-4">     
+        <div class="progress d-grid p2">
+            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+        </div>
+    </ng-container>
+
+    
+</div>
